@@ -53,12 +53,14 @@ else:
         lines = f.readlines()
         #lines[0] gives the initialization arguments
         print(lines[0])
+        #Run the initialization pipeline
         init_pipeline = Pipeline(init_config_path, [lines[0].replace("\n","")], working_dir, temp_dir)
         init_pipeline.run()
-        #everything imported up to this point should be left in the scene
+        #everything imported up to this point should be left in the scene. Using name as a key but should probably use some kind of hash/unique idenfifier for full implementation
         loaded_objects = [obj.name for obj in bpy.data.objects]
         print("Keeping the following in the scene: ")
         print(', '.join([obj_name for obj_name in loaded_objects]))
+        #run the repeat pipeline, keeping loaded_objects in the scene. should_perform_clean_up ensures that everything in between each batch is removed, with the exception of loaded_objects
         for line in lines[1:]:
             args = line.split(" ")
             args = [arg.replace("\n","") for arg in args]

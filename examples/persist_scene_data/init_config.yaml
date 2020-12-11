@@ -1,0 +1,51 @@
+
+{
+  "version": 3,
+  "setup": {
+    #"blender_install_path": "/home_local/<env:USER>/blender/",
+    "blender_install_path": "C:/Program Files/Blender Foundation/Blender 2.83/blender/",
+    "pip": [
+      "h5py"
+    ]
+  },
+  "modules": [
+    {
+      "module": "main.Initializer",
+      "config":{
+        "global": {
+              "output_dir": "examples/persist_scene_data/output",
+        }
+      }
+    },
+
+    {
+      "module": "lighting.LightLoader",
+      "config": {
+        "path": "examples/persist_scene_data/light_locations.csv",
+        "file_format":"location"
+      }
+    },
+
+
+    {
+      "module": "camera.UniformlySpacedCameraRingLoader",
+      "config": {
+        "circle_radius": 4,
+        "number_of_angles": 2,
+        "z_offset": 1.8,
+        #this has to be absolute file path
+        "background_image": "/examples/persist_scene_data/HDRI/photo_studio_01_2k.hdr",
+
+        "default_cam_param": {
+          "rotation": {
+            "format": "look_at"
+          },
+          "resolution_x": 512,
+          "resolution_y": 512,
+          "fov_is_half": False,
+        }
+      }
+    },
+
+  ]
+}

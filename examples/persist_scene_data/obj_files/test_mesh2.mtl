@@ -1,0 +1,54 @@
+# Blender MTL File: 'None'
+# Material Count: 4
+
+newmtl m102_body
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_body_normal.tga
+map_Kd D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_body_color.tga
+map_Ks D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_body_specular.tga
+
+newmtl m102_head
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_head_normal.tga
+map_Kd D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_head_color.tga
+map_Ks D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_head_specular.tga
+
+newmtl m102_helmet
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_helmet_normal.tga
+map_Kd D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_helmet_color.tga
+map_Ks D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_helmet_specular.tga
+
+newmtl m102_tools
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_tools_normal.tga
+map_Kd D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_tools_color.tga
+map_Ks D:\\SAUCEFiles\\Microsoft-Rocketbox-master\\Microsoft-Rocketbox-master\\Assets\\Avatars\\Professions\\Construction_Male_03\\Textures\\m102_tools_specular.tga

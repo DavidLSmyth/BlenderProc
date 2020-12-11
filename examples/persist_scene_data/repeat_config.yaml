@@ -1,0 +1,51 @@
+#<args:0> an obj file to render
+{
+  "version": 3,
+  "setup": {
+    #"blender_install_path": "/home_local/<env:USER>/blender/",
+    "blender_install_path": "C:/Program Files/Blender Foundation/Blender 2.83/blender/",
+    "pip": [
+      "h5py"
+    ]
+  },
+
+  "modules": [
+    {
+      "module": "loader.ObjectLoader",
+      "config": {
+        "path": "examples/persist_scene_data/obj_files/<args:0>",
+      }
+    },
+    {
+      "module": "renderer.RgbRenderer",
+      "config": {
+        "use_alpha": False,
+        "render_normals": False,
+        "samples": 10,
+        "render_distance": False,
+        #use hdri background
+        "transparent_background": False,
+
+      }
+    },
+
+
+    {
+      "module": "writer.Hdf5Writer",
+      "config": {
+        "write_alpha_channel": False,
+        "delete_temporary_files_afterwards": True,
+        "append_to_existing_output": True,
+        "postprocessing_modules": {
+          "distance": [
+          {
+            "module": "postprocessing.TrimRedundantChannels",
+            "config": {}
+          }
+          ]
+        }
+      }
+    }
+
+  ]
+}

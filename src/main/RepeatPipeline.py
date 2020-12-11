@@ -13,6 +13,7 @@ class RepeatPipeline:
         """
         Inits the pipeline, by calling the constructors of all modules mentioned in the config.
 
+        :param persistent_obj_names A list of names of objects to persist in the scene
         :param config_path path to the config
         :param args arguments which were provided to the run.py and are specified in the config file
         :param working_dir the current working dir usually the place where the run.py sits
@@ -41,7 +42,6 @@ class RepeatPipeline:
         Utility.temp_dir = Utility.resolve_path(temp_dir)
         os.makedirs(Utility.temp_dir, exist_ok=True)
 
-        #self.init_modules = Utility.initialize_modules(init_config["modules"])
         self.repeat_modules = Utility.initialize_modules(repeat_config["modules"])
 
     def _cleanup(self, persistent_objs):

@@ -44,7 +44,7 @@ print(args.init_config)
 print(args.repeat_config)
 print(args.args)
 print(args.help)
-print(args.batch_process != None)
+print(args.batch_process)
 
 config = config_parser.parse(args.init_config, args.args, args.help, skip_arg_placeholders=(args.batch_process != None)) # Don't parse placeholder args in batch mode.
 repeat_config = config_parser.parse(args.repeat_config, args.args, args.help, skip_arg_placeholders=(args.batch_process != None)) # Don't parse placeholder args in batch mode.
@@ -284,8 +284,9 @@ if not os.path.exists(temp_dir):
 
 
 if not args.batch_process:
-    p = subprocess.Popen([blender_run_path, "--background", "--python-exit-code", "2", "--python", path_src_run, "--", args.init_config, args.repeat_config, temp_dir] + args.args,
-                         env=dict(os.environ, PYTHONPATH=""), cwd=repo_root_directory)
+    print("Use run.py to run for a process that does not require persistent scene data!")
+    #p = subprocess.Popen([blender_run_path, "--background", "--python-exit-code", "2", "--python", path_src_run, "--", args.init_config, temp_dir] + args.args,
+    #                     env=dict(os.environ, PYTHONPATH=""), cwd=repo_root_directory)
 else:  # Pass the index file path containing placeholder args for all input combinations (cam, house, output path)
     p = subprocess.Popen([blender_run_path, "--background", "--python-exit-code", "2", "--python", path_src_run, "--",  args.init_config, args.repeat_config, temp_dir, "--batch-process", args.batch_process],
                          env=dict(os.environ, PYTHONPATH=""), cwd=repo_root_directory)
