@@ -34,7 +34,7 @@
         "number_of_angles": 2,
         "z_offset": 1.8,
         #this has to be absolute file path
-        "background_image": "/examples/persist_scene_data/HDRI/photo_studio_01_2k.hdr",
+        "background_image": "examples/persist_scene_data/HDRI/photo_studio_01_2k.hdr",
 
         "default_cam_param": {
           "rotation": {
